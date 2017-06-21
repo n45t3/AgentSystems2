@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xml:base="http://marketplace.eclipse.org/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Eclipse Plugins, Bundles and Products - Eclipse Marketplace</title>
+    <link>http://marketplace.eclipse.org/</link>
+    <description></description>
+    <language>en</language>
+     <atom:link href="http://marketplace.eclipse.org/rss.xml" rel="self" type="application/rss+xml" />
+      <item>
+    <title>Codename One</title>
+    <link>http://marketplace.eclipse.org/content/codename-one</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/Codename%20One_110x80.png&quot; width=&quot;110&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Fri, 2012-09-21 16:04&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Wed, 2017-06-21 04:30&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22Codename%20One%22&quot;&gt;Codename One&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/salmog/listings&quot; title=&quot;Shai Almog&quot;&gt;Shai Almog&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;&lt;a rel=&quot;nofollow&quot;&gt;Codename One&lt;/a&gt; Enables Java Developers to build true native applications for all mobile/tablet platforms Codename One allows Java developers to build native iPhone/iPad (iOS), Android &amp;amp; Windows apps without compromising on performance, features or ease of development. &lt;a rel=&quot;nofollow&quot;&gt;Codename One&lt;/a&gt; is free and open source. It integrates with Eclipse allowing you to build your applications and debug from Eclipse while targeting all mobile platforms.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
+     <pubDate>Fri, 21 Sep 2012 20:04:18 +0000</pubDate>
+ <dc:creator>salmog</dc:creator>
+ <guid isPermaLink="false">431465 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/codename-one#comments</comments>
+  </item>
+  <item>
+    <title>Yatta Launcher for Eclipse</title>
+    <link>http://marketplace.eclipse.org/content/yatta-launcher-eclipse</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/launcherIcon256_0.png&quot; width=&quot;80&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Thu, 2015-09-24 05:17&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Tue, 2017-06-20 08:37&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22Yatta%20Solutions%20GmbH%22&quot;&gt;Yatta Solutions GmbH&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/febelshuser/listings&quot; title=&quot;Frederic Ebelshaeuser&quot;&gt;Frederic Ebelshaeuser&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;h2&gt;
+	Share Your Eclipse Setup With Your Team&lt;/h2&gt;
+&lt;p&gt;The Launcher is a lightweight desktop app and the easiest way to organize your Eclipse setups – for yourself, your team, or within the community. Save your project setup as a profile, share it with your team and just start building great software. &lt;a href=&quot;https://www.yatta.de/profiles?utm_source=eclipse&amp;amp;utm_medium=marketplace%20entry&amp;amp;utm_campaign=Eclipse%20Promoted%20Solution&amp;amp;utm_term=promoted%20solution?download&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Try it now - it&#039;s free!&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;
+	What is a Profile?&lt;/h3&gt;
+&lt;p&gt;A profile is a &quot;snapshot&quot; of an Eclipse workspace combination containing plug-ins, workspace settings for your team (e.g. project metadata and -preferences, build server configurations and working sets), and links to source code and task repositories (like on GitHub). No actual source code of course. &lt;/p&gt;
+&lt;p&gt;The Yatta Launcher lets you build a profile form any Eclipse setup – automatically. You can even share your profiles with other users and, if you like, with the community. And it&#039;s for free!&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;a href=&quot;https://www.yatta.de/profiles?utm_source=eclipse&amp;amp;utm_medium=marketplace%20entry&amp;amp;utm_campaign=Eclipse%20Promoted%20Solution&amp;amp;utm_term=promoted%20solution&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h3&gt;
+	Use Cases&lt;/h3&gt;
+&lt;p&gt;Profiles help you manage all your Eclipse installations. Just install the Launcher, and you are good to go. With Profiles, you, your team, or your users will be able to install and update any project setup. Here are some use cases for Profiles:&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;
+		Easily organize your local installations:
+&lt;ul&gt;&lt;li&gt;
+				Start any Eclipse setup from a central location.&lt;/li&gt;
+&lt;li&gt;
+				Make your setups distinct with a name, an icon and a description.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;
+		Share your Eclipse setup with your project team:
+&lt;ul&gt;&lt;li&gt;
+				Help new team members get productive.&lt;/li&gt;
+&lt;li&gt;
+				Distribute your new project setup faster. Stop sending zip files with Eclipse setups.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;
+		Create profile templates for your team(s):
+&lt;ul&gt;&lt;li&gt;
+				Create and distribute your profiles for different project teams or for specific tasks or requirements.&lt;/li&gt;
+&lt;li&gt;
+				Automatically inform teams about profile updates.&lt;/li&gt;
+&lt;li&gt;
+				Build chains of parent, child, and grandchild profiles to manage project setups within your company and across your teams.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;
+		Transfer your Eclipse setup to a new workstation:
+&lt;ul&gt;&lt;li&gt;
+				Install your profile on another operating system.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;
+	Features&lt;/h3&gt;
+&lt;h4&gt;
+	Installation&lt;/h4&gt;
+&lt;ul&gt;&lt;li&gt;
+		Download a profile and get a working Eclipse setup including the workspace.&lt;/li&gt;
+&lt;li&gt;
+		Turn any Eclipse installation into a profile.&lt;/li&gt;
+&lt;li&gt;
+		Install your Eclipse IDE and workspace configuration on another device - and even on another operating system.&lt;/li&gt;
+&lt;li&gt;
+		Delete or uninstall obsolete profiles.&lt;/li&gt;
+&lt;/ul&gt;&lt;h4&gt;
+	Sharing&lt;/h4&gt;
+&lt;ul&gt;&lt;li&gt;
+		Deploy your Eclipse setup and workspace to your whole team, and get everyone ready to start coding in seconds.&lt;/li&gt;
+&lt;li&gt;
+		Create a group to privately share your profile with your team.&lt;/li&gt;
+&lt;li&gt;
+		Share your profile publically to build up your own community of followers.&lt;/li&gt;
+&lt;/ul&gt;&lt;h4&gt;
+	Updates&lt;/h4&gt;
+&lt;ul&gt;&lt;li&gt;
+		Synchronize versions of plug-ins and Eclipse releases – with your whole team or all your followers at once.&lt;/li&gt;
+&lt;li&gt;
+		Always get the latest updates for your profiles. Be it plug-ins or the latest Eclipse release, you never have to start from scratch again.&lt;/li&gt;
+&lt;/ul&gt;&lt;h4&gt;
+	Management&lt;/h4&gt;
+&lt;ul&gt;&lt;li&gt;
+		Start any profile directly from the Yatta Launcher, or create your own desktop shortcuts.&lt;/li&gt;
+&lt;li&gt;
+		See the contents of your profile at a single glance.&lt;/li&gt;
+&lt;li&gt;
+		Rearrange your profile list via drag and drop to find your favorite profiles faster.&lt;/li&gt;
+&lt;li&gt;
+		Make your profile unique: Customize name, description, color, and icon.&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;
+	Components&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;The Client&lt;/strong&gt; – Eclipse plug-in that lets you share and update your running Eclipse (profile) directly from within your IDE.&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;a href=&quot;https://www.yatta.de/profiles?utm_source=eclipse&amp;amp;utm_medium=marketplace%20entry&amp;amp;utm_campaign=Eclipse%20Promoted%20Solution&amp;amp;utm_term=promoted%20solution&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The Launcher&lt;/strong&gt; – Lightweight desktop app to help you manage all your Eclipse installations: Install, start, update, share or uninstall any profile via the Launcher.&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;a href=&quot;https://www.yatta.de/profiles?utm_source=eclipse&amp;amp;utm_medium=marketplace%20entry&amp;amp;utm_campaign=Eclipse%20Promoted%20Solution&amp;amp;utm_term=promoted%20solution&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The Profiles Hub&lt;/strong&gt; – The &lt;a href=&quot;https://www.yatta.de/profiles/hub?utm_source=eclipse&amp;amp;utm_medium=marketplace%20entry&amp;amp;utm_campaign=Eclipse%20Promoted%20Solution&amp;amp;utm_term=promoted%20solution&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Profiles Hub&lt;/a&gt; is the central Hub for downloading Eclipse profiles. When you share a profile, it will be available on the Profiles Hub. If you are searching for a profile that meets the requirements of your project - for example a certain set of plug-ins - the Profiles Hub is the place to visit. Use the search and filter functions to find what you are looking for. From the Profiles Hub, you can access any profile that&#039;s publicly available.&lt;/p&gt;
+&lt;p&gt;Yatta Profiles was designed to make starting new projects with Eclipse really simple. The best thing: Yatta Profiles for Eclipse is completey free - &lt;a href=&quot;https://www.yatta.de/profiles?utm_source=eclipse&amp;amp;utm_medium=marketplace%20entry&amp;amp;utm_campaign=Eclipse%20Promoted%20Solution&amp;amp;utm_term=promoted%20solution&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;so go ahead and try it!&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;
+	Use Cases&lt;/h3&gt;
+&lt;p&gt;Profiles help you manage all your Eclipse installations. Just install the Launcher, and you are good to go. With Profiles, you, your team, or your users will be able to install and update any project setup. Here are some use cases:&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;
+		Easily manage your local installations:
+&lt;ul&gt;&lt;li&gt;
+				Start a specific Eclipse setup.&lt;/li&gt;
+&lt;li&gt;
+				Make your setups distinct with a name, an icon and a description.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;
+		Share your Eclipse setup with a fellow on your project team:
+&lt;ul&gt;&lt;li&gt;
+				Help new team members get productive.&lt;/li&gt;
+&lt;li&gt;
+				Distribute your new project setup faster. Stop sending zip files with Eclipse setups.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;
+		Create profile templates for your team(s):
+&lt;ul&gt;&lt;li&gt;
+				Create, describe and distribute you profiles for project teams, specific tasks or requirements.&lt;/li&gt;
+&lt;li&gt;
+				Automatically inform profile followers about profile updates.&lt;/li&gt;
+&lt;li&gt;
+				Build profile Chains and manage Eclipse setups within your enterprise and across your teams.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;
+		Transfer your Eclipse setup to a new workstation:
+&lt;ul&gt;&lt;li&gt;
+				Install your profile on another Operating system.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;
+	Download Yatta Profiles for Eclipse&lt;/h3&gt;
+&lt;p&gt;Visit our &lt;a href=&quot;https://www.yatta.de/profiles?utm_source=eclipse&amp;amp;utm_medium=marketplace%20entry&amp;amp;utm_campaign=Eclipse%20Promoted%20Solution&amp;amp;utm_term=promoted%20solution&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;website&lt;/a&gt; for more information and free download.&lt;/p&gt;
+&lt;p&gt;Note that Profiles is still beta but stable – and productive. Anyhow, don&#039;t hesitate to send us feedback or file an error report in case anything doesn&#039;t work as intended.&lt;/p&gt;
+&lt;p&gt;We are working hard to continuously improve Profiles as well as other parts of the Eclipse IDE. Stay tuned for our roadmap. There is a lot more to come. You have a feature request? &lt;a href=&quot;http://www.yatta.de/contact/&quot; rel=&quot;nofollow&quot;&gt;Send us an email!&lt;/a&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;a href=&quot;https://www.yatta.de/profiles?utm_source=eclipse&amp;amp;utm_medium=marketplace%20entry&amp;amp;utm_campaign=Eclipse%20Promoted%20Solution&amp;amp;utm_term=promoted%20solution?download&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;
+	Contact us&lt;/h3&gt;
+&lt;p&gt;Do you need more information? &lt;a href=&quot;http://www.yatta.de/contact/&quot; rel=&quot;nofollow&quot;&gt;Contact us&lt;/a&gt; and follow the latest Yatta News on &lt;a href=&quot;http://twitter.com/YattaSolutions/&quot; rel=&quot;nofollow&quot;&gt;Twitter&lt;/a&gt;, &lt;a href=&quot;http://facebook.com/YattaSolutions/&quot; rel=&quot;nofollow&quot;&gt;Facebook&lt;/a&gt; or &lt;a href=&quot;https://plus.google.com/112332560095044183443/posts&quot; rel=&quot;nofollow&quot;&gt;Google +&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
+     <pubDate>Thu, 24 Sep 2015 09:17:52 +0000</pubDate>
+ <dc:creator>febelshuser</dc:creator>
+ <guid isPermaLink="false">2540018 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/yatta-launcher-eclipse#comments</comments>
+  </item>
+  <item>
+    <title>Ctrlflow Insights for Java</title>
+    <link>http://marketplace.eclipse.org/content/ctrlflow-insights-java</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/ctrlflow-logo_1.png&quot; width=&quot;110&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Fri, 2013-08-09 14:38&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Tue, 2017-06-20 04:11&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22Codetrails%20GmbH%22&quot;&gt;Codetrails GmbH&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/cteamrav/listings&quot; title=&quot;Codetrails Team&quot;&gt;Codetrails Team&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;&lt;strong&gt;Ctrlflow Insights&lt;/strong&gt; data mines your Java source code, extracts the programming knowledge hidden therein and integrates it back into your IDE by:&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;
+		augmenting your Javadoc with code snippets and code statistics&lt;/li&gt;
+&lt;li&gt;
+		enriching your content assist proposals with recommendations&lt;/li&gt;
+&lt;li&gt;
+		extending Findbugs with your API-specific bug patterns&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;– all mined from your code in your Eclipse Workspace.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://ctrlflow.com/insights/enterprise/?utm_campaign=ctrlflow&amp;amp;utm_source=marketplace&amp;amp;utm_medium=ctrlflow-insights&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Go to Ctrlflow Insights homepage&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Ctrlflow Insights&lt;/strong&gt; is developed by the committers of &lt;a href=&quot;https://eclipse.org/recommenders/?utm_campaign=recommenders&amp;amp;utm_source=marketplace&amp;amp;utm_medium=ctrlflow-insights&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Eclipse Code Recommenders&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
+     <pubDate>Fri, 09 Aug 2013 18:38:51 +0000</pubDate>
+ <dc:creator>cteamrav</dc:creator>
+ <guid isPermaLink="false">1082014 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/ctrlflow-insights-java#comments</comments>
+  </item>
+  <item>
+    <title>Team Explorer Everywhere</title>
+    <link>http://marketplace.eclipse.org/content/team-explorer-everywhere</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/BrandVisualStudioTeamServices2017RTW_64x.png&quot; width=&quot;64&quot; height=&quot;64&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Fri, 2012-04-20 15:48&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Mon, 2017-06-19 16:22&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22Microsoft%20Corp.%22&quot;&gt;Microsoft Corp.&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/dstaheli/listings&quot; title=&quot;David Staheli&quot;&gt;David Staheli&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;Team Explorer Everywhere is the official TFS plug-in for Eclipse from Microsoft. It works on the operating system of your choice with your favorite Eclipse-based IDE and helps you collaborate across your development teams using Team Foundation Server or &lt;a href=&quot;https://www.visualstudio.com/products/visual-studio-team-services-vs&quot; rel=&quot;nofollow&quot;&gt;Visual Studio Team Services&lt;/a&gt;. It’s an easy-to-install standalone plug-in that is a free download provided by the same team at Microsoft that develops Team Foundation Server and Visual Studio Team Services. Note that a Team Foundation Server &lt;a href=&quot;http://www.microsoft.com/visualstudio/licensing&quot; rel=&quot;nofollow&quot;&gt;CAL&lt;/a&gt; may be required to connect to TFS, but this is not required for connecting to Visual Studio Team Services. &lt;a href=&quot;https://java.visualstudio.com/&quot; rel=&quot;nofollow&quot;&gt;Learn more about Microsoft tools for Java teams.&lt;/a&gt; &lt;strong&gt;Team Explorer Everywhere Features&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;
+		Browse and clone &lt;a href=&quot;https://www.visualstudio.com/features/version-control-vs&quot; rel=&quot;nofollow&quot;&gt;Git repositories&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+		Full access to TFS Version Control (&lt;a href=&quot;https://www.visualstudio.com/features/version-control-vs&quot; rel=&quot;nofollow&quot;&gt;TFVC&lt;/a&gt;), including check-in, check-out, sync, branch, merge, diff, etc.&lt;/li&gt;
+&lt;li&gt;
+		Full access to &lt;a href=&quot;https://www.visualstudio.com/features/agiletools-vs&quot; rel=&quot;nofollow&quot;&gt;TFS agile tools, work items, and issue tracking&lt;/a&gt; capabilities allowing you to add, edit and query work items&lt;/li&gt;
+&lt;li&gt;
+		Full access to TFS Build functionality including the ability to create Ant, Maven, or Gradle based builds in TFS, publish JUnit test results into TFS or Visual Studio Team Services, monitor progress and handle results. This is fully compatible with all Team Foundation Build types including Gated Check-in and Continuous Integration Builds.&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;Localization / Translation&lt;/strong&gt; Your language, your words, your plug-in for you! Along with open-sourced &lt;a href=&quot;https://github.com/Microsoft/team-explorer-everywhere&quot; rel=&quot;nofollow&quot;&gt;Team Explorer Everywhere (TEE) source code on GitHub&lt;/a&gt; , we are making it possible for anyone to contribute translations in your native language. With these changes, you can now improve existing translated resources, translate updated resources, or even provide new language support TEE did not have before. Your contribution will be part of the TEE Plug-in in your language for everyone to use. We highly appreciate your efforts, and we welcome your feedback and suggestions on the TEE community localization process. Your contribution could be in next release! Please click &lt;a href=&quot;https://github.com/Microsoft/team-explorer-everywhere/blob/master/Localization.md&quot; rel=&quot;nofollow&quot;&gt;Localization&lt;/a&gt; for details on how to contribute in TEE community translation effort. Feel free to contact us if you have any questions. Happy contributing! For more information, including system requirements and details on command line connectivity to Team Foundation Server from Unix-based systems, see the &lt;a href=&quot;https://www.visualstudio.com/products/team-explorer-everywhere-vs&quot; rel=&quot;nofollow&quot;&gt;Team Explorer Everywhere page&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
+     <pubDate>Fri, 20 Apr 2012 19:48:42 +0000</pubDate>
+ <dc:creator>dstaheli</dc:creator>
+ <guid isPermaLink="false">252148 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/team-explorer-everywhere#comments</comments>
+  </item>
+  <item>
+    <title>IBM WebSphere Application Server Migration Toolkit - WAS Liberty </title>
+    <link>http://marketplace.eclipse.org/content/ibm-websphere-application-server-migration-toolkit-was-liberty</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/wdt-was-lp-500_8.png&quot; width=&quot;80&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Fri, 2014-06-13 10:07&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Mon, 2017-06-19 12:59&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22IBM%22&quot;&gt;IBM&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/cking2ie/listings&quot; title=&quot;Cheryl King&quot;&gt;Cheryl King&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;The IBM® WebSphere Application Server Migration Toolkit helps you move traditional WebSphere Application Server applications to Liberty, which can be running inside or outside of the cloud. The migration toolkit scans your application source code and highlights Java EE programming model and WebSphere API differences between the servers. It offers advice and potential solutions to assess the ease of moving applications to Liberty. It also informs you about any implementation differences that could affect your applications. Where possible, it provides quick fixes to make the application changes for you. When moving an application to the IBM Bluemix or other Cloud Foundry environment, the Cloud Migration Tool offers additional advice and best practices for your applications. For example, it will warn about using the Java File I/O API for storing persistent information on the local file system or suggest using the IBM Bluemix SessionCache service for storing HTTP session data. Also provided is a reporting tool that quickly scans your application and generates a visual report that shows which editions of WebSphere Application Server are best suited for the application. The report is an inventory of Java EE programming models that are used by the application. It indicates whether the application can be supported by WebSphere Application Server full profile or Liberty profile. Learn more through our &lt;a href=&quot;http://www.youtube.com/watch?v=9jQX1k_thKI&amp;amp;feature=youtu.be&quot; rel=&quot;nofollow&quot;&gt;youtube video.&lt;/a&gt; Go to &lt;a href=&quot;https://developer.ibm.com/wasdev/downloads/#filter/sortby=relevance;q=migration&quot; rel=&quot;nofollow&quot;&gt;WASdev&lt;/a&gt; to download archives for all the migration tools including a command line binary scanner.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
+     <pubDate>Fri, 13 Jun 2014 14:07:05 +0000</pubDate>
+ <dc:creator>cking2ie</dc:creator>
+ <guid isPermaLink="false">1744378 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/ibm-websphere-application-server-migration-toolkit-was-liberty#comments</comments>
+  </item>
+  <item>
+    <title>IBM WebSphere Application Server Migration Toolkit - Competitive Tools</title>
+    <link>http://marketplace.eclipse.org/content/ibm-websphere-application-server-migration-toolkit-competitive-tools</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/wdt-was-lp-500_9.png&quot; width=&quot;80&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Fri, 2014-06-13 11:49&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Mon, 2017-06-19 12:59&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22IBM%22&quot;&gt;IBM&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/cking2ie/listings&quot; title=&quot;Cheryl King&quot;&gt;Cheryl King&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;The IBM® WebSphere® Application Server Migration Toolkit is a suite of tools and knowledge collections that enables your organization to quickly and cost-effectively migrate to Liberty and traditional WebSphere Application Server V8, V8.5.5, or V9. This specific Eclipse Marketplace solution includes migration tools for migration from competitive application servers including: Apache Tomcat Server, JBoss Application Server, Oracle Application Server, or Oracle® WebLogic Server. Learn more through a free multimedia educational module, &lt;a href=&quot;http://publib.boulder.ibm.com/infocenter/ieduasst/v1r1m0/topic/com.ibm.iea.wasmt/wasmt/3.5/Overview.html&quot; rel=&quot;nofollow&quot;&gt;IBM Education Assistant.&lt;/a&gt; This release includes application migration tools for all application servers mentioned above as well as the version to version migration tools. The application migration tools use the scanning capabilities of Rational Software Analyzer to locate application elements that should be updated in order to ensure optimal compatibility and performance with WebSphere Application Server V8 through V9, as well as unique editing features to review and appropriately change the code with the developer in complete control. They focus on migration issues when moving applications from third-party application servers to WebSphere Application Server. This includes scanning for many proprietary items such as Java APIs, Deployment descriptor config in extensions files, MBeans, annotations, etc. See the &lt;a href=&quot;https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wamt/MigrationToolkitCompetitive/MigrationToolkit_en_US_Competitive.pdf&quot; rel=&quot;nofollow&quot;&gt;product documentation&lt;/a&gt; for a complete list. Rules to migrate applications from previous versions of Java SE and between vendor implementations is also included. Best practices are provided when Spring or Hibernate frameworks are found within applications to ensure successful deployment on WebSphere Application Server. The Apache Tomcat configuration migration tool helps move Tomcat config to WebSphere Liberty. This provides an integrated developer experience for migrating both configuration and applications from Apache Tomcat to WebSphere Liberty profile. Go to &lt;a href=&quot;https://developer.ibm.com/wasdev/downloads/#filter/sortby=relevance;q=migration&quot; rel=&quot;nofollow&quot;&gt;WASdev&lt;/a&gt; to download archives for all the migration tools including the command-line binary scanning tool.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
+     <pubDate>Fri, 13 Jun 2014 15:49:09 +0000</pubDate>
+ <dc:creator>cking2ie</dc:creator>
+ <guid isPermaLink="false">1744576 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/ibm-websphere-application-server-migration-toolkit-competitive-tools#comments</comments>
+  </item>
+  <item>
+    <title>IBM WebSphere Application Server Migration Toolkit</title>
+    <link>http://marketplace.eclipse.org/content/ibm-websphere-application-server-migration-toolkit</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/wdt-was-lp-500_10.png&quot; width=&quot;80&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Fri, 2012-06-08 06:36&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Mon, 2017-06-19 12:58&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22IBM%22&quot;&gt;IBM&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/cking2ie/listings&quot; title=&quot;Cheryl King&quot;&gt;Cheryl King&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;The IBM® WebSphere® Application Server Migration Toolkit is a suite of tools and knowledge collections that enables your organization to quickly and cost-effectively migrate to WAS Liberty and WebSphere Application Server V8, V8.5.5 or V9, whether from a previous version of WebSphere Application Server or competitive application servers including Apache Tomcat Server, JBoss Application Server, Oracle Application Server, and Oracle® WebLogic Server. It features cloud migration rules for running your application on Liberty for Java on IBM Bluemix and other third-party PaaS environments such as Cloud Foundry. This Eclipse Marketplace solution combines all our Eclipse-based migration tools in one easy installation. The WebSphere Version to Version Application Migration Tool enables organizations deploying to Liberty or traditional WebSphere Application Server to more easily migrate applications from WebSphere Application Server V5.1 and later. Upgrading to a more recent version of WebSphere Application Server is of course less time-consuming than migrating from another application server, given that IBM has made significant investments in upward compatibility, configuration, and management process upgrades, as well as API preservation and consistency between versions. However, in some cases, applications must be changed in order to support or exploit new levels of industry standard specifications delivered with new versions of WebSphere Application Server. Go to &lt;a href=&quot;https://developer.ibm.com/wasdev/downloads/#filter/sortby=relevance;q=migration&quot; rel=&quot;nofollow&quot;&gt;WASdev&lt;/a&gt; to download archives for all the migration tools.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
+     <pubDate>Fri, 08 Jun 2012 10:36:47 +0000</pubDate>
+ <dc:creator>cking2ie</dc:creator>
+ <guid isPermaLink="false">292930 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/ibm-websphere-application-server-migration-toolkit#comments</comments>
+  </item>
+  <item>
+    <title>COFIQ - Get Your SOA / API Act Together</title>
+    <link>http://marketplace.eclipse.org/content/cofiq-get-your-soa-api-act-together</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/logo-small1_0.jpg&quot; width=&quot;110&quot; height=&quot;35&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Thu, 2015-12-17 05:34&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Mon, 2017-06-19 09:22&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22COFIQ%22&quot;&gt;COFIQ&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/amincav/listings&quot; title=&quot;Ad Min&quot;&gt;Ad Min&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;COFIQ allows service portfolio management the easy way. No cumbersome XML/XSD/WSDL/JSON-SCHEMA manipulation. COFIQ generates these for you from a single repository with vocabularies, message and service definitions. Ofcourse available as SAAS solution. The main attraction of COFIQ is that it guards interoperability and recognizes obsolete services, triggering you to define new versions and determining the impact of vocabulary changes before committing them. This proved illusive for most SOA initiatives, leading to JBOWS at best (Just a Bunch of Web Services). Manually determining the impact of vocabulary changes under pressure from projects has proven too much. With COFIQ this is a breeze! COGIQ generates single file WSDL&#039;s (1.1) and/or JSON HYPER SCHEMA for direct tool consumption. With more API formats in the pipeline. These can be imported into Eclipse (WSDL), or other tools able to import Service/API contracts, for subsequent generation of stubs and skeletons, making it a loosely coupled component in your Service/API development process. For human consumption COFIQ uses its user interface and PDF reports allowing you to capture and review semantics and syntax precisely. There is really no need to learn any of the specific standard formats. You just interact with the format agnostic repository. Use the free 14 day trial. And don&#039;t hesitate to contact us for any question. Our SOA approach is focussed on keeping things as simple as possible and really reaping the benefits of SOA that have escaped many of us. Currently we are working on supporting the SWAGGER- and RAML API standards also (all generated from the same COFIQ repository). We have developed a unique approach where a single repository model can support WSDL as well as REST/API standards. After all services, independent of format used, can be seen as black boxes with inputs and outputs.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
+     <pubDate>Thu, 17 Dec 2015 10:34:29 +0000</pubDate>
+ <dc:creator>amincav</dc:creator>
+ <guid isPermaLink="false">2650830 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/cofiq-get-your-soa-api-act-together#comments</comments>
+  </item>
+  <item>
+    <title>g9 Database Import</title>
+    <link>http://marketplace.eclipse.org/content/g9-database-import</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/Esito-g9-110x80.png&quot; width=&quot;110&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Wed, 2016-09-14 09:30&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Mon, 2017-06-19 07:17&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22Esito%20AS%22&quot;&gt;Esito AS&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/dbyesen/listings&quot; title=&quot;Dag Bøyesen&quot;&gt;Dag Bøyesen&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;Do you need to create Java classes, or an Xcore or Ecore representation of your exisiting database? &lt;strong&gt;g9 Database Model Import&lt;/strong&gt; is a free g9 Eclipse plugin producing models based on structure information read from databases. Given a connection to an existing database, the g9 Database Import will read tables and columns in your database (using the database schema) and create the corresponding model either in Java, Xcore or Ecore depending on the project type of your Eclipse project. An import of your database to a Java Project will create Java classes, an import to an Xcore Project will create an Xcore model, all other Eclipse Project types will result in an Ecore model. The Java classes may be enriched with &lt;em&gt;JPA annotations&lt;/em&gt;. If you work with Xcore or Ecore models you should use &lt;em&gt;Eclipse for Java and DSL Developers&lt;/em&gt;. In the g9 Database Import feature you connect to a database using a JDBC driver. The built-in drivers are MySQL, MS SQL Server (jTDS) and Sybase ASE (jTDS). Use the function [&lt;strong&gt;Maintain JDBC Drivers&lt;/strong&gt;] in the g9 Import feature to connect to other databases, e.g Oracle, PostgreSQL, Firebird or a DBMS of your choice. Choose&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;
+		which tables to include: by default all tables are included and a class name based on the table names are suggested&lt;/li&gt;
+&lt;li&gt;
+		which columns to include: by default all columns are included and an attribute name based on the column names are suggested&lt;/li&gt;
+&lt;li&gt;
+		the data type mappings for your domain model based on the JDBC types - or use default values&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;You may download the complete &lt;strong&gt;g9&lt;/strong&gt; product and use the Database import feature in a g9 Eclipse Project. To be able to exploit the other features in g9, you should create a &lt;em&gt;g9 UI Modeling Project&lt;/em&gt; and import your database to an Ecore, Xcore model or Java source with &lt;em&gt;g9 annotations&lt;/em&gt;. Please see the User guide for more information about the g9 Database Import feature.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
+     <pubDate>Wed, 14 Sep 2016 13:30:45 +0000</pubDate>
+ <dc:creator>dbyesen</dc:creator>
+ <guid isPermaLink="false">3072599 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/g9-database-import#comments</comments>
+  </item>
+  <item>
+    <title>QMetry Automation Studio</title>
+    <link>http://marketplace.eclipse.org/content/qmetry-automation-studio</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/QAS-128.png&quot; width=&quot;80&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Thu, 2017-06-15 02:29&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Mon, 2017-06-19 02:59&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22Infostretch%20Corporation%22&quot;&gt;Infostretch Corporation&lt;/a&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/sshah7dn/listings&quot; title=&quot;Qmetry Automation Studio&quot;&gt;Qmetry Automation Studio&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p&gt;QMetry Automation Studio (QAS) is a test automation tool that provides a single, unified solution for web, mobile (including native and web app) and web services testing.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;</description>
+     <pubDate>Thu, 15 Jun 2017 06:29:16 +0000</pubDate>
+ <dc:creator>sshah7dn</dc:creator>
+ <guid isPermaLink="false">3495285 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/qmetry-automation-studio#comments</comments>
+  </item>
+  </channel>
+</rss>

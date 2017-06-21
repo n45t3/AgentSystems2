@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;prisoners/prisoners.rs/styles/jzombie.Zombie.style_1.xml&apos; to &apos;prisoners.Prisoner.style_1.xml&apos;" description="Rename resource &apos;jzombie.Zombie.style_1.xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="prisoners.rs/styles/jzombie.Zombie.style_1.xml" name="prisoners.Prisoner.style_1.xml" stamp="1495675878856" updateReferences="true"/>
+</session>
