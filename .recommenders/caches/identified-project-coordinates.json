@@ -1,1 +1,1 @@
-[[{"location":"/usr/lib/jvm/java-8-oracle","type":"JRE","hints":{}},"jre:jre:1.8.0"],[{"location":"/opt/eclipse/plugins/repast.simphony.bin_and_src_2.4.0/repast.simphony.bin_and_src.jar","type":"JAR","hints":{}},"ABSENT"]]
+[[{"location":"/opt/eclipse/plugins/repast.simphony.bin_and_src_2.4.0/repast.simphony.bin_and_src.jar","type":"JAR","hints":{}},"ABSENT"],[{"location":"/home/bartek/Pulpit/jgrapht.jar","type":"JAR","hints":{}},"ABSENT"],[{"location":"/usr/lib/jvm/java-8-oracle","type":"JRE","hints":{}},"jre:jre:1.8.0"]]

@@ -1,6 +1,0 @@
-*.class
-debug.log
-velocity.log
-Repast.settings
-ModelOutput*.txt
-

@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
-<fullyQualifiedTypeName name="repast.simphony.space.grid.Grid"/>
 <fullyQualifiedTypeName name="java.lang.Math"/>
 <fullyQualifiedTypeName name="repast.simphony.space.continuous.BouncyBorders"/>
 <fullyQualifiedTypeName name="java.util.Random"/>
 <fullyQualifiedTypeName name="repast.simphony.space.continuous.ContinuousSpace"/>
+<fullyQualifiedTypeName name="repast.simphony.space.grid.StrictBorders"/>
+<fullyQualifiedTypeName name="repast.simphony.space.SpatialException"/>
+<fullyQualifiedTypeName name="org.jgrapht.graph.SimpleGraph"/>
+<fullyQualifiedTypeName name="repast.simphony.space.grid.Grid"/>
+<fullyQualifiedTypeName name="org.jgrapht.EdgeFactory"/>
+<fullyQualifiedTypeName name="repast.simphony.space.grid.GridPoint"/>
 </qualifiedTypeNameHistroy>
