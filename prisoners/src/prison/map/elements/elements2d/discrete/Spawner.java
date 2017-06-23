@@ -4,7 +4,6 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import prison.map.geometry.point.point2d.Int2DPoint;
-import prison.map.geometry.span.span2d.Int2DSpan;
 
 public class Spawner extends Map2DElement {
 
