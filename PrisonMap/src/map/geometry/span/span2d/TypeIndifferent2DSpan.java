@@ -1,6 +1,6 @@
-package prison.map.geometry.span.span2d;
+package map.geometry.span.span2d;
 
-import prison.map.geometry.span.TypeIndifferentSpan;
+import map.geometry.span.TypeIndifferentSpan;
 
 public abstract class TypeIndifferent2DSpan<T> extends TypeIndifferentSpan<T> {
 

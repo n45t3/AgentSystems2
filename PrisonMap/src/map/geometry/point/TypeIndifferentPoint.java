@@ -1,4 +1,4 @@
-package prison.map.geometry.point;
+package map.geometry.point;
 
 public class TypeIndifferentPoint<T> {
 	

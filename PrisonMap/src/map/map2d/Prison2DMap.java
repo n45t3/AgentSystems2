@@ -1,4 +1,4 @@
-package prison.map.map2d;
+package map.map2d;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -7,13 +7,13 @@ import java.util.function.Consumer;
 
 import org.json.*;
 
-import prison.map.MapFieldType;
-import prison.map.elements.elements2d.discrete.Cell;
-import prison.map.elements.elements2d.discrete.Direction;
-import prison.map.elements.elements2d.discrete.Spawner;
-import prison.map.elements.elements2d.discrete.Wall;
-import prison.map.geometry.point.point2d.Int2DPoint;
-import prison.map.geometry.span.span2d.Int2DSpan;
+import map.MapFieldType;
+import map.elements.elements2d.discrete.Cell;
+import map.elements.elements2d.discrete.Direction;
+import map.elements.elements2d.discrete.Spawner;
+import map.elements.elements2d.discrete.Wall;
+import map.geometry.point.point2d.Int2DPoint;
+import map.geometry.span.span2d.Int2DSpan;
 
 public class Prison2DMap {
 
@@ -78,10 +78,10 @@ public class Prison2DMap {
 			for (int j = c.getLocation().getY() + 1; j < c.getSpan().getYspan() - 1; ++j)
 				this.map[i][j] = MapFieldType.cell;
 
-		Wall[] walls = new Wall[] { new Wall(c.getLocation(), c.getSpan().getXspan(), Direction.left),
-				new Wall(c.getLocation(), c.getSpan().getXspan(), Direction.right),
-				new Wall(c.getLocation(), c.getSpan().getYspan(), Direction.up),
-				new Wall(c.getLocation(), c.getSpan().getYspan(), Direction.down) };
+		Wall[] walls = new Wall[] { new Wall(c.getLocation(), c.getSpan().getXspan(), Direction.W),
+				new Wall(c.getLocation(), c.getSpan().getXspan(), Direction.E),
+				new Wall(c.getLocation(), c.getSpan().getYspan(), Direction.N),
+				new Wall(c.getLocation(), c.getSpan().getYspan(), Direction.S) };
 		for (Wall w : walls)
 			if (w.getDirection() != c.getDirection())
 				this.addWall(w);

@@ -1,4 +1,4 @@
-package prison.map.geometry.span;
+package map.geometry.span;
 
 public abstract class TypeIndifferentSpan<T> {
 

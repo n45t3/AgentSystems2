@@ -1,6 +1,6 @@
-package prison.map.geometry.point.point2d;
+package map.geometry.point.point2d;
 
-import prison.map.geometry.point.TypeIndifferentPoint;
+import map.geometry.point.TypeIndifferentPoint;
 
 public class TypeIndifferent2DPoint<T> extends TypeIndifferentPoint<T> {
 	

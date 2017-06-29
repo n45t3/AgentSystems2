@@ -1,4 +1,4 @@
-package prison.map.geometry.span.span2d;
+package map.geometry.span.span2d;
 
 public class Int2DSpan extends TypeIndifferent2DSpan<Integer> {
 

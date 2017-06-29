@@ -1,4 +1,4 @@
-package prison.map.elements;
+package map.elements;
 
 public abstract class MapElementBase<LocType, SpanType> {
 

@@ -1,9 +1,9 @@
-package prison.map.elements.elements2d.discrete;
+package map.elements.elements2d.discrete;
 
 import java.util.Map;
 import java.util.Map.Entry;
 
-import prison.map.geometry.point.point2d.Int2DPoint;
+import map.geometry.point.point2d.Int2DPoint;
 
 public class Spawner extends Map2DElement {
 

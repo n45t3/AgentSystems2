@@ -1,4 +1,4 @@
-package prison.map.map2d;
+package prison.map;
 
 import java.util.HashMap;
 import java.util.Map;
