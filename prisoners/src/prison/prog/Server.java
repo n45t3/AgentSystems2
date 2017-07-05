@@ -19,6 +19,7 @@ public class Server {
     private ServerSocket  ss       = null;
     private Socket        client   = null;
     private Runnable      worker   = null;
+    private static Thread workerT  = null;
     private static Server instance = new Server();
     private PrisonManager pm       = null;
 
@@ -35,7 +36,7 @@ public class Server {
         try {
             instance.ss = new ServerSocket(port);
             // instance.ss.setSoTimeout(3000);
-            Runnable t = new Runnable() {
+            instance.worker = new Runnable() {
 
                 @Override
                 public void run() {
@@ -45,15 +46,23 @@ public class Server {
                             instance.pm.STOPPED = false;
                         }
                         JSONObject json = new JSONObject();
+                        Thread.sleep(5000);
                         json.put("type", "no_elo");
                         json.put("content", "bartek pizda XD");
                         if (!send(json)) return;
+                        while (true) {
+                            synchronized (instance.pm.lock) {
+                                if (!instance.pm.RUNNING) break;
+                            }
+                            Thread.sleep(5000);
+                        }
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
                 }
             };
-            new Thread(t).start();
+            workerT = new Thread(instance.worker);
+            workerT.start();
 
             // instance.worker = new Runnable() {
             //
@@ -96,5 +105,9 @@ public class Server {
             e.printStackTrace();
             return false;
         }
+    }
+
+    public static void join() throws InterruptedException {
+        workerT.join();
     }
 }

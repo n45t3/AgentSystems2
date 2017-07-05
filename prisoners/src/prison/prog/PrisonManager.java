@@ -64,6 +64,7 @@ public class PrisonManager extends Thread {
 
     public void run() {
         if (RUNNING) return;
+        Server.register(this);
         Server.init(DEF_PORT);
         RUNNING = true;
         try (FileReader fr = new FileReader(new File(path))) {

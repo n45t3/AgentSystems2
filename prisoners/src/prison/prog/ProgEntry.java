@@ -60,6 +60,7 @@ public class ProgEntry {
                 Thread.sleep(2000);
             }
             pm.join();
+            Server.join();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
