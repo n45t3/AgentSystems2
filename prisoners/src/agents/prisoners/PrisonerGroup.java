@@ -7,8 +7,13 @@ import java.util.List;
 
 public class PrisonerGroup {
 
-    public String        name;
-    private List<String> scythe = new ArrayList<String>();
+    public String         name;
+    private List<String>  scythe  = new ArrayList<>();
+    public List<Prisoner> members = new ArrayList<>();
+
+    public final List<String> getScythe() {
+        return this.scythe;
+    }
 
     public boolean hasScythe(String with) {
         return this.scythe.contains(with);

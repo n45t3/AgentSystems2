@@ -1,13 +1,20 @@
 package prison.prog;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 import org.jgrapht.GraphPath;
 import org.jgrapht.alg.interfaces.AStarAdmissibleHeuristic;
 import org.jgrapht.alg.shortestpath.AStarShortestPath;
 import org.jgrapht.graph.*;
 
+import agents.prisoners.Prisoner;
+import agents.prisoners.PrisonerGroupMap;
 import prison.map.MapFieldType;
 import prison.map.geometry.point.point2d.Int2DPoint;
 import prison.map.map2d.Prison2DMap;
@@ -33,9 +40,9 @@ class ManhattanDistance implements AStarAdmissibleHeuristic<Integer> {
 
 public class PrisonGraph {
 
-    private SimpleGraph<Integer, DefaultEdge>       graph       = new SimpleGraph<>(DefaultEdge.class);
-    private Prison2DMap                             map         = null;
-    private AStarShortestPath<Integer, DefaultEdge> pathCounter = null;
+    private SimpleGraph<Integer, DefaultWeightedEdge>       graph       = new SimpleGraph<>(DefaultWeightedEdge.class);
+    private Prison2DMap                                     map         = null;
+    private AStarShortestPath<Integer, DefaultWeightedEdge> pathCounter = null;
 
     public PrisonGraph(Prison2DMap pm) {
         this.map = pm;
@@ -44,20 +51,73 @@ public class PrisonGraph {
                 if (this.map.getField(x, y) == MapFieldType.wall) continue;
                 int v = this.getVertex(x, y);
                 this.graph.addVertex(v);
-                if (x > 0) this.graph.addEdge(v, this.getVertex(x - 1, y));
-                if (y > 0) this.graph.addEdge(v, this.getVertex(x, y - 1));
+                if (x > 0) this.addEdge(v, this.getVertex(x - 1, y));
+                if (y > 0) this.addEdge(v, this.getVertex(x, y - 1));
             }
         }
-        this.pathCounter = new AStarShortestPath<Integer, DefaultEdge>(this.graph, new ManhattanDistance(this));
+        this.pathCounter = new AStarShortestPath<Integer, DefaultWeightedEdge>(this.graph, new ManhattanDistance(this));
     }
 
     public List<Integer> getPath(Integer from, Integer to) {
-        GraphPath<Integer, DefaultEdge> gp = this.pathCounter.getPath(from, to);
+        GraphPath<Integer, DefaultWeightedEdge> gp = this.pathCounter.getPath(from, to);
         return gp.getVertexList();
     }
 
     public void setWeights(String group) {
-        
+        for (DefaultWeightedEdge e : this.graph.edgeSet())
+            this.graph.setEdgeWeight(e, 1.0);
+        List<String> set = PrisonerGroupMap.mapping.get(group).getScythe();
+        for (String g : set) {
+            for (Prisoner p : PrisonerGroupMap.mapping.get(g).members) {
+                /*
+                 * Map<Integer, List<DefaultWeightedEdge>> neigh =
+                 * this.getNeighbourhood(this.getVertex(p.x, p.y), 3); for (int
+                 * i = 1; i <= 3; ++i) { double wgh = 5.0 - i;
+                 * List<DefaultWeightedEdge> li = neigh.get(i); for
+                 * (DefaultWeightedEdge e : li) if (wgh >
+                 * this.graph.getEdgeWeight(e)) this.graph.setEdgeWeight(e,
+                 * wgh); }
+                 */
+                Integer v_N = this.getVertex(p.x, p.y - 1), v_E = this.getVertex(p.x + 1, p.y),
+                        v_S = this.getVertex(p.x, p.y + 1), v_W = this.getVertex(p.x - 1, p.y);
+                if (this.graph.containsVertex(v_N)) for (DefaultWeightedEdge e : this.graph.edgesOf(v_N))
+                    this.graph.setEdgeWeight(e, 4.0);
+                if (this.graph.containsVertex(v_E)) for (DefaultWeightedEdge e : this.graph.edgesOf(v_E))
+                    this.graph.setEdgeWeight(e, 4.0);
+                if (this.graph.containsVertex(v_S)) for (DefaultWeightedEdge e : this.graph.edgesOf(v_S))
+                    this.graph.setEdgeWeight(e, 4.0);
+                if (this.graph.containsVertex(v_W)) for (DefaultWeightedEdge e : this.graph.edgesOf(v_W))
+                    this.graph.setEdgeWeight(e, 4.0);
+            }
+        }
+    }
+
+    public List<DefaultWeightedEdge> getNeighbourhood(Integer v) {
+        return getNeighbourhood(v, 1).get(1);
+    }
+
+    public Map<Integer, List<DefaultWeightedEdge>> getNeighbourhood(Integer v, int row) {
+        Map<Integer, List<DefaultWeightedEdge>> out = new HashMap<>();
+        Map<Integer, Set<Integer>> visited = new HashMap<>();
+        Set<Integer> l0 = new HashSet<>();
+        l0.add(v);
+        visited.put(0, l0);
+        for (int i = 1; i <= row; ++i) {
+            Set<Integer> li = new HashSet<>();
+            List<DefaultWeightedEdge> neigh = new ArrayList<>();
+            visited.put(i, li);
+            for (Integer from : visited.get(i - 1)) {
+                Set<Integer> prev = i >= 2 ? visited.get(i - 2) : new HashSet<>();
+                for (DefaultWeightedEdge e : this.graph.edgesOf(from)) {
+                    Integer to = this.graph.getEdgeTarget(e);
+                    if (prev.contains(to)) continue;
+                    li.add(to);
+                    neigh.add(e);
+                }
+            }
+            out.put(i, neigh);
+        }
+        return out;
     }
 
     public void addVertex(int x, int y) {
@@ -110,6 +170,6 @@ public class PrisonGraph {
 
     public int[] getParams(int v) {
         if (this.map == null) return null;
-        return new int[] { v / this.map.getXspan(), v % this.map.getXspan() };
+        return new int[] { v % this.map.getXspan(), v / this.map.getXspan() };
     }
 }

@@ -74,4 +74,8 @@ public class Cell extends Map2DElement {
         this.dir = o;
     }
 
+    public String toString() {
+        return this.getLocation().toString() + ' ' + this.getSpan().toString() + ' ' + this.getDirection().toString();
+    }
+
 }

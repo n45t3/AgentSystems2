@@ -11,6 +11,8 @@ public class TypeIndifferentPoint<T> {
         if (args.length == 0) throw new IllegalArgumentException(this.getClass().getName() + ": dimension zero");
         this.dim = args.length;
         this.coords = (T[]) new Object[args.length];
+        for (int i = 0; i < args.length; ++i)
+            this.coords[i] = args[i];
     }
 
     public T getArg(int idx, boolean one_based) {
@@ -36,5 +38,16 @@ public class TypeIndifferentPoint<T> {
     public boolean equals(Object o) {
         if (o.getClass() == this.getClass()) return ((TypeIndifferentPoint<T>) o).coords.equals(this.coords);
         return false;
+    }
+
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append('[');
+        for (T c : coords) {
+            sb.append(c);
+            sb.append(',');
+        }
+        sb.append(']');
+        return sb.toString();
     }
 }

@@ -32,7 +32,6 @@ public abstract class Agent {
     }
 
     public boolean goTo(int x, int y) {
-        if (this.map == null) return false;
         synchronized (this.map) {
             if (!this.map.acquireField(x, y)) return false;
             this.map.releaseField(this.x, this.y);
@@ -142,6 +141,8 @@ public abstract class Agent {
     }
 
     public abstract void tick();
+
+    public abstract void die();
 
     public boolean place(PrisonGraph graph) {
         if (this.graph != null) return false;

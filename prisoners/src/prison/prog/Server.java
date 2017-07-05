@@ -28,11 +28,22 @@ public class Server {
         try {
             instance.ss = new ServerSocket(port);
             // instance.ss.setSoTimeout(3000);
-            instance.client = instance.ss.accept();
-            JSONObject json = new JSONObject();
-            json.put("type", "no_elo");
-            json.put("content", "bartek pizda XD");
-            if (!send(json)) return false;
+            Runnable t = new Runnable() {
+
+                @Override
+                public void run() {
+                    try {
+                        instance.client = instance.ss.accept();
+                        JSONObject json = new JSONObject();
+                        json.put("type", "no_elo");
+                        json.put("content", "bartek pizda XD");
+                        if (!send(json)) return;
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            };
+            new Thread(t).start();
 
             // instance.worker = new Runnable() {
             //
@@ -57,7 +68,7 @@ public class Server {
             //
             // };
             return true;
-        } catch (IOException | JSONException e) {
+        } catch (IOException e) {
             e.printStackTrace();
             return false;
         }

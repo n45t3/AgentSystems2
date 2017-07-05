@@ -1,16 +1,14 @@
 package agents.prisoners;
 
+import java.util.List;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import agents.Action;
 import agents.Agent;
 import prison.map.elements.elements2d.discrete.Cell;
 import prison.map.elements.elements2d.discrete.Direction;
-import prison.map.geometry.point.point2d.Int2DPoint;
-import repast.simphony.engine.schedule.ScheduledMethod;
-import repast.simphony.space.SpatialException;
-import repast.simphony.space.grid.Grid;
-import repast.simphony.space.grid.GridPoint;
 
 
 
@@ -24,8 +22,14 @@ public class Prisoner extends Agent {
 
     public Prisoner(int x, int y, String group) {
         super(x, y);
-        PrisonerGroupMap.add(group);
+        PrisonerGroupMap.add(group).members.add(this);
         this.group = group;
+    }
+
+    public void die() {
+        PrisonerGroupMap.mapping.get(group).members.remove(this);
+        this.map.releaseField(this.x, this.y);
+        this.graph.addVertex(this.x, this.y);
     }
 
     // public Prisoner(Grid<Object> grid) {
@@ -47,18 +51,29 @@ public class Prisoner extends Agent {
     // }
 
     public void chooseCell() {
+        System.out.println("searching for cell");
         if (this.targetCell == null) {
             for (Cell c : this.map.cells) {
                 boolean retry = false;
-                for (String g : c.getGroups())
-                    if (PrisonerGroupMap.mapping.get(this.group).hasScythe(g)) retry = true;
+                for (String g : c.getGroups()) {
+                    if (PrisonerGroupMap.mapping.get(this.group).hasScythe(g)) {
+                        retry = true;
+                        System.out.println("scythe with " + g);
+                    }
+                }
                 if (retry) continue;
                 int[] tmp = this.map.getFreeCellSpace(c);
-                if (tmp == null) continue;
+                if (tmp == null) {
+                    System.out.println("no space at cell " + c.toString());
+                    continue;
+                }
                 this.targetCell = c;
                 this.target = tmp;
+                System.out.println("going to cell " + c);
+                System.out.println(this.x + ',' + this.y + " -> " + tmp[0] + ',' + tmp[1]);
                 return;
             }
+            System.out.println("no suitable cell");
             this.targetCell = null;
             this.target = new int[] { 0, 0 };
             return;
@@ -67,7 +82,7 @@ public class Prisoner extends Agent {
         if (tmp == null) {
             this.targetCell = null;
             chooseCell();
-        }
+        } else this.target = tmp;
     }
 
     public void scythe(Prisoner p) {
@@ -83,16 +98,34 @@ public class Prisoner extends Agent {
         else if (PrisonerGroupMap.mapping.get(this.group).hasScythe(p.group)) scythe(p);
     }
 
+    private boolean check() {
+        if (this.act == Action.FinallyLayYourWorthlessBodyToRest) return true;
+        if (this.target != null && this.target[0] == this.x && this.target[1] == this.y) {
+            this.act = Action.FinallyLayYourWorthlessBodyToRest;
+            System.out.println("destination reached");
+            return true;
+        }
+        return false;
+    }
+
     @Override
     public void tick() {
+        System.out.println(this.id + " tick");
+        if (this.check()) return;
         chooseCell();
-        this.graph.setWeights(this.group);
         this.graph.addVertex(this.x, this.y);
-        int[] next = this.graph.getParams(
-                this.graph.getPath(
-                        this.graph.getVertex(this.x, this.y), this.graph.getVertex(this.target[0], this.target[1])
-                ).get(0)
+        this.graph.setWeights(this.group);
+        List<Integer> path = this.graph.getPath(
+                this.graph.getVertex(this.x, this.y), this.graph.getVertex(this.target[0], this.target[1])
         );
+        int[] next = this.graph.getParams(path.get(1));
+        System.out.println("next step from " + this.x + ',' + this.y + ": " + next[0] + ',' + next[1]);
+        if (next[0] == this.x && next[1] == this.y) {
+            this.act = Action.ExistInConstantPainAndMisery;
+            this.graph.removeVertex(this.graph.getVertex(this.x, this.y));
+            return;
+        }
+        this.act = Action.TakeAnotherStepTowardsDeath;
         this.dir = Direction.get(next[0] - this.x, next[1] - this.y);
         this.goTo(next[0], next[1]);
         this.graph.removeVertex(this.graph.getVertex(this.x, this.y));
@@ -102,6 +135,7 @@ public class Prisoner extends Agent {
     public JSONObject getJSON() {
         JSONObject out = super.getJSON();
         try {
+            out.put("type", "prisoner");
             out.put("group", this.group);
         } catch (JSONException e) {
             e.printStackTrace();

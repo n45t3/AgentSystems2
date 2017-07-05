@@ -16,9 +16,11 @@ public class PrisonerGroupMap {
         return mapping.containsKey(g);
     }
 
-    public static void add(String g) {
-        if (mapping.containsKey(g)) return;
-        mapping.put(g, new PrisonerGroup(g, getRandomScythe()));
+    public static PrisonerGroup add(String g) {
+        if (mapping.containsKey(g)) return mapping.get(g);
+        PrisonerGroup pg = new PrisonerGroup(g, getRandomScythe());
+        mapping.put(g, pg);
+        return pg;
     }
 
     public static String[] getRandomScythe() {
@@ -36,5 +38,9 @@ public class PrisonerGroupMap {
             out[i] = (String) mapping.keySet().toArray()[idx];
         }
         return out;
+    }
+
+    public static String getRandomGroup() {
+        return (String) mapping.keySet().toArray()[rng.nextInt(mapping.size())];
     }
 }

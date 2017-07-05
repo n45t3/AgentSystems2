@@ -46,4 +46,15 @@ public abstract class TypeIndifferentSpan<T> {
         if (o.getClass() == this.getClass()) return ((TypeIndifferentSpan<T>) o).coords.equals(this.coords);
         return false;
     }
+
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append('[');
+        for (T c : coords) {
+            sb.append(c);
+            sb.append(',');
+        }
+        sb.append(']');
+        return sb.toString();
+    }
 }

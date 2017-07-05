@@ -1,0 +1,163 @@
+{
+   "span" : {
+      "x" : 64,
+      "y" : 32
+   },
+   "cells" : [
+      {
+         "x" : 18,
+         "y" : 0,
+         "length" : 7,
+         "height" : 7,
+         "direction" : "S"
+      },
+      {
+         "x" : 24,
+         "y" : 0,
+         "length" : 7,
+         "height" : 7,
+         "direction" : "S"
+      },
+      {
+         "x" : 30,
+         "y" : 0,
+         "length" : 7,
+         "height" : 7,
+         "direction" : "S"
+      },
+      {
+         "x" : 36,
+         "y" : 0,
+         "length" : 7,
+         "height" : 7,
+         "direction" : "S"
+      },
+      {
+         "x" : 42,
+         "y" : 0,
+         "length" : 7,
+         "height" : 7,
+         "direction" : "S"
+      },
+      {
+         "x" : 48,
+         "y" : 0,
+         "length" : 7,
+         "height" : 7,
+         "direction" : "S"
+      },
+
+      {
+         "x" : 27,
+         "y" : 25,
+         "length" : 7,
+         "height" : 7,
+         "direction" : "N"
+      },
+      {
+         "x" : 33,
+         "y" : 25,
+         "length" : 7,
+         "height" : 7,
+         "direction" : "N"
+      },
+      {
+         "x" : 39,
+         "y" : 25,
+         "length" : 7,
+         "height" : 7,
+         "direction" : "N"
+      },
+      {
+         "x" : 45,
+         "y" : 25,
+         "length" : 7,
+         "height" : 7,
+         "direction" : "N"
+      },
+      {
+         "x" : 51,
+         "y" : 25,
+         "length" : 7,
+         "height" : 7,
+         "direction" : "N"
+      },
+      {
+         "x" : 57,
+         "y" : 25,
+         "length" : 7,
+         "height" : 7,
+         "direction" : "N"
+      },
+
+      {
+         "x" : 0,
+         "y" : 0,
+         "length" : 8,
+         "height" : 7,
+         "direction" : "E"
+      },
+      {
+         "x" : 0,
+         "y" : 13,
+         "length" : 8,
+         "height" : 7,
+         "direction" : "E"
+      },
+      {
+         "x" : 0,
+         "y" : 19,
+         "length" : 8,
+         "height" : 7,
+         "direction" : "E"
+      },
+      {
+         "x" : 0,
+         "y" : 25,
+         "length" : 8,
+         "height" : 7,
+         "direction" : "E"
+      },
+
+      {
+         "x" : 11,
+         "y" : 0,
+         "length" : 8,
+         "height" : 7,
+         "direction" : "W"
+      },
+      {
+         "x" : 11,
+         "y" : 13,
+         "length" : 8,
+         "height" : 7,
+         "direction" : "W"
+      },
+      {
+         "x" : 11,
+         "y" : 19,
+         "length" : 8,
+         "height" : 7,
+         "direction" : "W"
+      },
+      {
+         "x" : 11,
+         "y" : 25,
+         "length" : 8,
+         "height" : 7,
+         "direction" : "W"
+      },
+   ],
+   "spawners" : [
+      {
+         "x" : 62,
+         "y" : 2,
+         "spawn" : "agents.prisoners.Prisoner"
+      },
+      {
+         "x" : 0,
+         "y" : 10,
+         "spawn" : "agents.prisoners.Prisoner"
+      }
+   ]
+}

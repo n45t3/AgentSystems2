@@ -21,7 +21,11 @@ import prison.map.map2d.Prison2DMap;
 
 public class PrisonManager extends Thread {
 
-    private final Object lock = new Object();
+    public final Prison2DMap getMap() {
+        return this.map;
+    }
+
+    public final Object lock = new Object();
 
     private static final int    DEF_PORT = 8888;
     private static final String path     = "example.json";
@@ -49,13 +53,18 @@ public class PrisonManager extends Thread {
     private void tick() throws InterruptedException {
         for (Agent a : agents)
             a.tick();
-        if (!Server.send(getJSON())) throw new RuntimeException();
+        // if (!Server.send(getJSON())) throw new RuntimeException();
+        JSONObject json = getJSON();
+        if (!Server.send(json)) {
+            System.err.println("couldn't send data to client, using stdout");
+            System.out.println(json);
+        }
         Thread.sleep(1000);
     }
 
     public void run() {
         if (RUNNING) return;
-        if (!Server.init(DEF_PORT)) return;
+        Server.init(DEF_PORT);
         RUNNING = true;
         try (FileReader fr = new FileReader(new File(path))) {
             JSONObject map = new JSONObject(new JSONTokener(fr));
