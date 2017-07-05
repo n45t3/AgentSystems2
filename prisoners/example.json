@@ -150,13 +150,13 @@
    ],
    "spawners" : [
       {
-         "x" : 62,
+         "x" : 63,
          "y" : 2,
          "spawn" : "agents.prisoners.Prisoner"
       },
       {
-         "x" : 0,
-         "y" : 10,
+         "x" : 22,
+         "y" : 31,
          "spawn" : "agents.prisoners.Prisoner"
       }
    ]

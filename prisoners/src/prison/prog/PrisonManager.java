@@ -17,6 +17,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 
+import com.goebl.david.Webb;
+
 import agents.Agent;
 import agents.prisoners.Prisoner;
 import prison.map.map2d.Prison2DMap;
@@ -55,27 +57,9 @@ public class PrisonManager extends Thread {
     }
 
     private boolean post(JSONObject json) {
-        try {
-            HttpURLConnection conn = (HttpURLConnection) (new URL("localhost:6000").openConnection());
-            byte[] data = json.toString().getBytes(StandardCharsets.UTF_8);
-            conn.setDoOutput(true);
-            conn.setInstanceFollowRedirects(false);
-            conn.setRequestMethod("POST");
-            conn.setRequestProperty("charset", "utf-8");
-            conn.setRequestProperty("Content-Length", Integer.toString(data.length));
-            conn.setRequestProperty("Content-Type", "application/json");
-            conn.setUseCaches(false);
-            try (DataOutputStream wr = new DataOutputStream(conn.getOutputStream())) {
-                wr.write(data);
-            } catch (Exception e) {
-                e.printStackTrace();
-                return false;
-            }
-            return true;
-        } catch (IOException e) {
-            e.printStackTrace();
-            return false;
-        }
+    	Webb webb = Webb.create();
+    	webb.post("http://localhost:6000").param("message", json.toString()).ensureSuccess().asVoid();
+    	return true;
     }
 
     private void tick() throws InterruptedException {
