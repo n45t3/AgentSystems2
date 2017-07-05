@@ -21,6 +21,8 @@ import com.goebl.david.Webb;
 
 import agents.Agent;
 import agents.prisoners.Prisoner;
+import agents.prisoners.PrisonerGroupMap;
+import prison.map.elements.elements2d.discrete.Spawner;
 import prison.map.map2d.Prison2DMap;
 
 
@@ -57,9 +59,9 @@ public class PrisonManager extends Thread {
     }
 
     private boolean post(JSONObject json) {
-    	Webb webb = Webb.create();
-    	webb.post("http://localhost:6000").param("message", json.toString()).ensureSuccess().asVoid();
-    	return true;
+        Webb webb = Webb.create();
+        webb.post("http://localhost:6000").param("message", json.toString()).ensureSuccess().asVoid();
+        return true;
     }
 
     private void tick() throws InterruptedException {
@@ -92,7 +94,25 @@ public class PrisonManager extends Thread {
         }
         this.graph = new PrisonGraph(this.map);
         try {
-            // this.STOPPED = true;
+            for (int i = 0; i < 30;) {
+                synchronized (lock) {
+                    if (!RUNNING) break;
+                    if (STOPPED) continue;
+                }
+                for (Spawner s : this.map.spawns) {
+                    // Map<String, Object> args = new HashMap<>();
+                    // args.put("x",s.getLocation().getX());
+                    // args.put("y",s.getLocation().getY());
+                    this.addAgent(
+                            new Prisoner(
+                                    s.getLocation().getX(), s.getLocation().getY(), PrisonerGroupMap.getRandomGroup()
+                            )
+                    );
+
+                }
+                tick();
+                ++i;
+            }
             while (true) {
                 synchronized (lock) {
                     if (!RUNNING) break;
