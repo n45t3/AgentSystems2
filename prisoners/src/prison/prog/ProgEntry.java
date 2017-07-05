@@ -38,10 +38,13 @@ public class ProgEntry {
         PrisonerGroupMap.mapping.put("Banda siwego", siwy);
         PrisonerGroupMap.mapping.put("Chłopakowie z Mokotowa", mk);
 
-        
         try {
             Thread.sleep(4000);
-            for (int i = 0; i < 30; ++i) {
+            for (int i = 0; i < 30;) {
+                synchronized (pm.lock) {
+                    if (!pm.RUNNING) break;
+                    if (pm.STOPPED) continue;
+                }
                 for (Spawner s : pm.getMap().spawns) {
                     // Map<String, Object> args = new HashMap<>();
                     // args.put("x",s.getLocation().getX());
@@ -51,8 +54,9 @@ public class ProgEntry {
                                     s.getLocation().getX(), s.getLocation().getY(), PrisonerGroupMap.getRandomGroup()
                             )
                     );
-                    
+
                 }
+                ++i;
                 Thread.sleep(2000);
             }
             pm.join();

@@ -20,8 +20,15 @@ public class Server {
     private Socket        client   = null;
     private Runnable      worker   = null;
     private static Server instance = new Server();
+    private PrisonManager pm       = null;
 
     private Server() {
+    }
+
+    public static boolean register(PrisonManager pm) {
+        if (instance.pm != null) return false;
+        instance.pm = pm;
+        return true;
     }
 
     public static boolean init(int port) {
@@ -34,6 +41,9 @@ public class Server {
                 public void run() {
                     try {
                         instance.client = instance.ss.accept();
+                        synchronized (instance.pm.lock) {
+                            instance.pm.STOPPED = false;
+                        }
                         JSONObject json = new JSONObject();
                         json.put("type", "no_elo");
                         json.put("content", "bartek pizda XD");

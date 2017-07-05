@@ -29,7 +29,7 @@ public class PrisonManager extends Thread {
 
     private static final int    DEF_PORT = 8888;
     private static final String path     = "example.json";
-    private boolean             RUNNING  = false;
+    public boolean              RUNNING  = false, STOPPED = false;
     private Prison2DMap         map      = null;
     private PrisonGraph         graph    = null;
 
@@ -79,9 +79,11 @@ public class PrisonManager extends Thread {
         }
         this.graph = new PrisonGraph(this.map);
         try {
+            this.STOPPED = true;
             while (true) {
                 synchronized (lock) {
                     if (!RUNNING) break;
+                    if (STOPPED) continue;
                 }
                 tick();
             }
