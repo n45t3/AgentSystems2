@@ -1,6 +1,8 @@
 package agents.prisoners;
 
+import java.util.Comparator;
 import java.util.List;
+import java.util.PriorityQueue;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -53,7 +55,37 @@ public class Prisoner extends Agent {
     public void chooseCell() {
         System.out.println("searching for cell");
         if (this.targetCell == null) {
-            for (Cell c : this.map.cells) {
+            PriorityQueue<Cell> cells = new PriorityQueue<Cell>(
+                    this.map.cells.size(), new Comparator<Cell>() {
+
+                        @Override
+                        public int compare(Cell o1, Cell o2) {
+                            if (o1.targets == o2.targets) return 0;
+                            return o1.targets < o2.targets ? -1 : 1;
+                        }
+                    }
+            );
+
+            for (Cell c : this.map.cells)
+                cells.add(c);
+
+            for (Cell c : cells) {
+                if (c.mainGroup != null && c.mainGroup.equals(this.group)) {
+                    int[] tmp = this.map.getFreeCellSpace(c);
+                    if (tmp == null) {
+                        System.out.println("no space at cell " + c.toString());
+                        continue;
+                    }
+                    this.targetCell = c;
+                    this.target = tmp;
+                    c.targets++;
+                    System.out.println("going to cell " + c);
+                    System.out.println(this.x + ',' + this.y + " -> " + tmp[0] + ',' + tmp[1]);
+                    return;
+                }
+
+                if (c.mainGroup != null && PrisonerGroupMap.mapping.get(this.group).hasScythe(c.mainGroup)) continue;
+                
                 boolean retry = false;
                 for (String g : c.getGroups()) {
                     if (PrisonerGroupMap.mapping.get(this.group).hasScythe(g)) {
@@ -62,6 +94,7 @@ public class Prisoner extends Agent {
                     }
                 }
                 if (retry) continue;
+
                 int[] tmp = this.map.getFreeCellSpace(c);
                 if (tmp == null) {
                     System.out.println("no space at cell " + c.toString());
@@ -69,6 +102,8 @@ public class Prisoner extends Agent {
                 }
                 this.targetCell = c;
                 this.target = tmp;
+                c.targets++;
+                if (c.mainGroup == null) c.mainGroup = this.group;
                 System.out.println("going to cell " + c);
                 System.out.println(this.x + ',' + this.y + " -> " + tmp[0] + ',' + tmp[1]);
                 return;
@@ -78,6 +113,7 @@ public class Prisoner extends Agent {
             this.target = new int[] { 0, 0 };
             return;
         }
+
         int[] tmp = this.map.getFreeCellSpace(this.targetCell);
         if (tmp == null) {
             this.targetCell = null;

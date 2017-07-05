@@ -19,6 +19,9 @@ public class Cell extends Map2DElement {
     private Map<UUID, Prisoner>         prisoners = new HashMap<>();
     private Map<String, List<Prisoner>> groups    = new HashMap<>();
 
+    public String mainGroup;
+    public int    targets = 0;
+
     public void register(Prisoner p) {
         if (this.prisoners.containsKey(p.id)) return;
         this.prisoners.put(p.id, p);
