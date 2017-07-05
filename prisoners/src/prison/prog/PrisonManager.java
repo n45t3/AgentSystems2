@@ -53,7 +53,7 @@ public class PrisonManager extends Thread {
         Thread.sleep(1000);
     }
 
-    public void work() {
+    public void run() {
         if (RUNNING) return;
         if (!Server.init(DEF_PORT)) return;
         RUNNING = true;

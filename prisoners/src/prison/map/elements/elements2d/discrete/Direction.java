@@ -11,6 +11,14 @@ public enum Direction {
     // NW,
     UNDEF;
 
+    public static Direction get(int dx, int dy) {
+        if (dx == 1) return E;
+        if (dx == -1) return W;
+        if (dy == 1) return S;
+        if (dy == -1) return N;
+        return UNDEF;
+    }
+
     public int[] move(int x, int y) {
         int[] out = new int[] { x, y };
         switch (this) {

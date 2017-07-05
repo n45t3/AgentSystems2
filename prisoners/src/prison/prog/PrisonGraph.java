@@ -56,6 +56,18 @@ public class PrisonGraph {
         return gp.getVertexList();
     }
 
+    public void setWeights(String group) {
+        
+    }
+
+    public void addVertex(int x, int y) {
+        Integer v = this.getVertex(x, y);
+        if (this.graph.containsVertex(v)) return;
+        this.graph.addVertex(v);
+        for (Integer to : this.getEdges(x, y))
+            this.graph.addEdge(v, to);
+    }
+
     public void addVertex(Integer v) {
         if (this.graph.containsVertex(v)) return;
         this.graph.addVertex(v);

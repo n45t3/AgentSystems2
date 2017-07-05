@@ -27,11 +27,11 @@ public class Server {
     public static boolean init(int port) {
         try {
             instance.ss = new ServerSocket(port);
-            instance.ss.setSoTimeout(3000);
+            // instance.ss.setSoTimeout(3000);
             instance.client = instance.ss.accept();
             JSONObject json = new JSONObject();
             json.put("type", "no_elo");
-            json.put("content","bartek pizda XD");
+            json.put("content", "bartek pizda XD");
             if (!send(json)) return false;
 
             // instance.worker = new Runnable() {

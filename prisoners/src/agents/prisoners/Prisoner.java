@@ -86,6 +86,16 @@ public class Prisoner extends Agent {
     @Override
     public void tick() {
         chooseCell();
+        this.graph.setWeights(this.group);
+        this.graph.addVertex(this.x, this.y);
+        int[] next = this.graph.getParams(
+                this.graph.getPath(
+                        this.graph.getVertex(this.x, this.y), this.graph.getVertex(this.target[0], this.target[1])
+                ).get(0)
+        );
+        this.dir = Direction.get(next[0] - this.x, next[1] - this.y);
+        this.goTo(next[0], next[1]);
+        this.graph.removeVertex(this.graph.getVertex(this.x, this.y));
     }
 
     @Override
