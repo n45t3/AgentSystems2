@@ -1,9 +1,13 @@
 package prison.prog;
 
+import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -50,12 +54,36 @@ public class PrisonManager extends Thread {
         return json;
     }
 
+    private boolean post(JSONObject json) {
+        try {
+            HttpURLConnection conn = (HttpURLConnection) (new URL("localhost:6000").openConnection());
+            byte[] data = json.toString().getBytes(StandardCharsets.UTF_8);
+            conn.setDoOutput(true);
+            conn.setInstanceFollowRedirects(false);
+            conn.setRequestMethod("POST");
+            conn.setRequestProperty("charset", "utf-8");
+            conn.setRequestProperty("Content-Length", Integer.toString(data.length));
+            conn.setRequestProperty("Content-Type", "application/json");
+            conn.setUseCaches(false);
+            try (DataOutputStream wr = new DataOutputStream(conn.getOutputStream())) {
+                wr.write(data);
+            } catch (Exception e) {
+                e.printStackTrace();
+                return false;
+            }
+            return true;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
     private void tick() throws InterruptedException {
         for (Agent a : agents)
             a.tick();
         // if (!Server.send(getJSON())) throw new RuntimeException();
         JSONObject json = getJSON();
-        if (!Server.send(json)) {
+        if (!this.post(json)) {
             System.err.println("couldn't send data to client, using stdout");
             System.out.println(json);
         }
@@ -64,8 +92,8 @@ public class PrisonManager extends Thread {
 
     public void run() {
         if (RUNNING) return;
-        Server.register(this);
-        Server.init(DEF_PORT);
+        // Server.register(this);
+        // Server.init(DEF_PORT);
         RUNNING = true;
         try (FileReader fr = new FileReader(new File(path))) {
             JSONObject map = new JSONObject(new JSONTokener(fr));
@@ -80,7 +108,7 @@ public class PrisonManager extends Thread {
         }
         this.graph = new PrisonGraph(this.map);
         try {
-            this.STOPPED = true;
+            // this.STOPPED = true;
             while (true) {
                 synchronized (lock) {
                     if (!RUNNING) break;

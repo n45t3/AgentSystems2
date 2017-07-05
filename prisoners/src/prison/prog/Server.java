@@ -54,7 +54,7 @@ public class Server {
                             synchronized (instance.pm.lock) {
                                 if (!instance.pm.RUNNING) break;
                             }
-                            Thread.sleep(5000);
+                            instance.client.getInputStream();
                         }
                     } catch (Exception e) {
                         e.printStackTrace();
