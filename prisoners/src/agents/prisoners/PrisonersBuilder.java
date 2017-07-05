@@ -1,6 +1,15 @@
-package prisoners;
+package agents.prisoners;
 
-import prisoners.Prisoner;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+import org.json.JSONObject;
+import org.json.JSONTokener;
+
+import prison.map.RepastMap2DTranslator;
+import prison.map.map2d.Prison2DMap;
 import repast.simphony.context.Context;
 import repast.simphony.context.space.grid.GridFactory;
 import repast.simphony.context.space.grid.GridFactoryFinder;
@@ -9,16 +18,6 @@ import repast.simphony.space.grid.Grid;
 import repast.simphony.space.grid.GridBuilderParameters;
 import repast.simphony.space.grid.SimpleGridAdder;
 import repast.simphony.space.grid.StrictBorders;
-
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-
-import org.json.*;
-
-import prison.map.map2d.Prison2DMap;
-import prison.map.map2d.RepastMap2DTranslator;
 
 public class PrisonersBuilder implements ContextBuilder<Object> {
 
@@ -50,7 +49,7 @@ public class PrisonersBuilder implements ContextBuilder<Object> {
 
 		int prisonerCount = 5; // (Integer)params.getValue("prisoner_count");
 		for (int i = 0; i < prisonerCount; i++) {
-			Prisoner p = new Prisoner(grid);
+			//Prisoner p = new Prisoner(grid);
 			context.add(p);
 			grid.moveTo(p, 10, 10 + i * 10);
 		}

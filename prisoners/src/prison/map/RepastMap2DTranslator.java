@@ -5,6 +5,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import prison.map.MapFieldType;
+import prison.map.map2d.Prison2DMap;
 import repast.simphony.context.Context;
 import repast.simphony.valueLayer.GridValueLayer;
 

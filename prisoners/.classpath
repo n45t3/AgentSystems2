@@ -5,8 +5,13 @@
 	<classpathentry exported="true" kind="con" path="GROOVY_SUPPORT"/>
 	<classpathentry exported="true" kind="con" path="GROOVY_DSL_SUPPORT"/>
 	<classpathentry kind="con" path="REPAST_SIMPHONY_SUPPORT"/>
-	<classpathentry kind="lib" path="/home/bartek/Pulpit/jgrapht-1.0.1.zip"/>
-	<classpathentry kind="lib" path="/home/bartek/Pulpit/jgrapht.jar.zip"/>
-	<classpathentry exported="true" kind="lib" path="/home/bartek/Pulpit/jgrapht.jar"/>
+	<classpathentry kind="lib" path="/home/n45t3/Projects/JSON/org.json.jar"/>
+	<classpathentry kind="lib" path="/home/n45t3/Projects/varia.java/jgrapht-1.0.1/lib/antlr4-runtime-4.5.3.jar"/>
+	<classpathentry kind="lib" path="/home/n45t3/Projects/varia.java/jgrapht-1.0.1/lib/jgraph-5.13.0.0.jar"/>
+	<classpathentry kind="lib" path="/home/n45t3/Projects/varia.java/jgrapht-1.0.1/lib/jgrapht-core-1.0.1.jar"/>
+	<classpathentry kind="lib" path="/home/n45t3/Projects/varia.java/jgrapht-1.0.1/lib/jgrapht-demo-1.0.1.jar"/>
+	<classpathentry kind="lib" path="/home/n45t3/Projects/varia.java/jgrapht-1.0.1/lib/jgrapht-ext-1.0.1.jar"/>
+	<classpathentry kind="lib" path="/home/n45t3/Projects/varia.java/jgrapht-1.0.1/lib/jgrapht-ext-1.0.1-uber.jar"/>
+	<classpathentry kind="lib" path="/home/n45t3/Projects/varia.java/jgrapht-1.0.1/lib/jgraphx-2.0.0.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

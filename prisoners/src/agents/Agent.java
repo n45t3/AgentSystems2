@@ -1,26 +1,53 @@
-package prisoners;
+package agents;
 
 import prison.map.elements.elements2d.discrete.Direction;
 import prison.map.map2d.Prison2DMap;
+import prison.prog.PrisonGraph;
+
+import java.util.UUID;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import prison.map.MapFieldType;
 
 
 
-public class Agent {
+public abstract class Agent {
 
     public int       x, y;
     public Direction dir;
     public Action    act;
+    public UUID      id;
 
-    private Prison2DMap map;
+    protected Prison2DMap map;
+    protected PrisonGraph graph;
 
-    public void place(Prison2DMap map) {
-        if (this.map != null) return;
+    public boolean place(Prison2DMap map) {
+        if (this.map != null) return false;
         this.map = map;
+        this.goTo(this.x, this.y);
+        this.searchDir();
+        return true;
+    }
+
+    public boolean goTo(int x, int y) {
+        if (this.map == null) return false;
+        synchronized (this.map) {
+            if (!this.map.acquireField(x, y)) return false;
+            this.map.releaseField(this.x, this.y);
+        }
+        this.x = x;
+        this.y = y;
+        return true;
     }
 
     public Agent() {
-        this(0, 0, null);
+        this(-1, -1, null);
+    }
+
+    public Agent(int x, int y) {
+        this(x, y, null);
     }
 
     public Agent(int x, int y, Prison2DMap map) {
@@ -38,11 +65,7 @@ public class Agent {
         }
         int[] tmp = this.dir.move(this.x, this.y);
         if (tmp[0] == this.x && tmp[1] == this.y) return false;
-        if (!this.map.acquireField(tmp[0], tmp[1])) return false;
-        if (!this.map.releaseField(this.x, this.y)) return false;
-        this.x = tmp[0];
-        this.y = tmp[1];
-        return true;
+        return this.goTo(tmp[0], tmp[1]);
     }
 
     public void searchDir() {
@@ -94,6 +117,36 @@ public class Agent {
         // }
         // this.dir = Direction.UNDEF;
         // return;
+    }
+
+    public JSONObject getJSON() {
+        JSONObject json = new JSONObject();
+        try {
+            json.put("id", this.id.toString());
+            json.put("x", this.x);
+            json.put("y", this.y);
+            json.put("dir", this.dir);
+            json.put("act", this.act);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return json;
+    }
+
+    public boolean equals(Object o) {
+        if (o instanceof Agent) {
+            Agent a = (Agent) o;
+            return this.id.equals(a.id);
+        }
+        return false;
+    }
+
+    public abstract void tick();
+
+    public boolean place(PrisonGraph graph) {
+        if (this.graph != null) return false;
+        this.graph = graph;
+        return true;
     }
 }
 

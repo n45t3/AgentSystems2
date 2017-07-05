@@ -1,4 +1,4 @@
-package prisoners;
+package agents.prisoners;
 
 import org.jgrapht.graph.SimpleGraph;
 import org.jgrapht.graph.DefaultEdge;

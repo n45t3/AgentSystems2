@@ -15,131 +15,156 @@ import prison.map.elements.elements2d.discrete.Wall;
 import prison.map.geometry.point.point2d.Int2DPoint;
 import prison.map.geometry.span.span2d.Int2DSpan;
 
+
+
 public class Prison2DMap {
 
-	public List<Spawner> spawns = new ArrayList<Spawner>();
-	private Int2DSpan span;
-	private MapFieldType[][] map;
+    public List<Spawner>     spawns = new ArrayList<Spawner>();
+    public List<Cell>        cells  = new ArrayList<Cell>();
+    private Int2DSpan        span;
+    private MapFieldType[][] map;
 
-	public int getXspan() {
-		return span.getXspan();
-	}
+    public int[] getFreeCellSpace(Cell c) {
+        for (int i = 1; i < c.getSpan().getXspan() - 1; ++i)
+            for (int j = 1; j < c.getSpan().getYspan() - 1; ++j)
+                if (map[i][j] != MapFieldType.occupied)
+                    return new int[] { c.getLocation().getX() + i, c.getLocation().getY() + j };
+        return null;
+    }
 
-	public int getYspan() {
-		return span.getYspan();
-	}
+    public int getXspan() {
+        return span.getXspan();
+    }
 
-	public boolean releaseField(int x, int y) {
-		if (getField(x, y) != MapFieldType.empty)
-			return false;
-		this.map[x][y] = MapFieldType.empty;
-		return true;
-	}
+    public int getYspan() {
+        return span.getYspan();
+    }
 
-	public boolean acquireField(int x, int y) {
-		if (getField(x, y) != MapFieldType.empty)
-			return false;
-		this.map[x][y] = MapFieldType.occupied;
-		return true;
-	}
+    public boolean releaseField(int x, int y) {
+        if (this.map == null) return false;
+        if (x < 0 || y < 0 || x >= this.getXspan() || y >= this.getYspan()) return false;
+        this.map[x][y] = MapFieldType.empty;
+        return true;
+    }
 
-	public MapFieldType getField(int x, int y) {
-		if (this.span.getXspan() == 0)
-			throw new IllegalArgumentException(Prison2DMap.class.getName() + ": zero x dimension");
-		if (this.span.getYspan() == 0)
-			throw new IllegalArgumentException(Prison2DMap.class.getName() + ": zero y dimension");
-		if (x >= map.length || y >= map[0].length)
-			throw new IllegalArgumentException(Prison2DMap.class.getName() + ": index out of range");
-		return this.map[x][y];
-	}
+    public boolean acquireField(int x, int y) {
+        if (this.map == null) return false;
+        if (x < 0 || y < 0 || x >= this.getXspan() || y >= this.getYspan()) return false;
+        if (getField(x, y) != MapFieldType.empty) return false;
+        this.map[x][y] = MapFieldType.occupied;
+        return true;
+    }
 
-	public boolean isFree(Int2DPoint beg, Int2DSpan span) {
-		if (this.map == null)
-			throw new NullPointerException();
-		for (int i = 0; i < span.getXspan(); ++i)
-			for (int j = 0; j < span.getYspan(); ++j)
-				if (this.getField(beg.getX() + i, beg.getY() + j) != MapFieldType.empty)
-					return false;
-		return true;
-	}
+    public MapFieldType getField(int x, int y) {
+        if (this.map == null) throw new NullPointerException();
+        if (this.span.getXspan() == 0)
+            throw new IllegalArgumentException(Prison2DMap.class.getName() + ": zero x dimension");
+        if (this.span.getYspan() == 0)
+            throw new IllegalArgumentException(Prison2DMap.class.getName() + ": zero y dimension");
+        if (x < 0 || y < 0 || x >= this.getXspan() || y >= this.getYspan())
+            throw new IllegalArgumentException(Prison2DMap.class.getName() + ": index out of range");
+        return this.map[x][y];
+    }
 
-	public void addWall(Wall w) {
-		for (int i = 0; i < w.getSpan().getXspan(); ++i)
-			for (int j = 0; j < w.getSpan().getYspan(); ++j)
-				if (this.getField(w.getLocation().getX() + i, w.getLocation().getY() + j) == MapFieldType.empty)
-					this.map[w.getBeginning().getX() + i][w.getBeginning().getY() + j] = MapFieldType.wall;
-	}
+    public boolean isFree(Int2DPoint beg, Int2DSpan span) {
+        if (this.map == null) throw new NullPointerException();
+        for (int i = 0; i < span.getXspan(); ++i)
+            for (int j = 0; j < span.getYspan(); ++j)
+                if (this.getField(beg.getX() + i, beg.getY() + j) != MapFieldType.empty) return false;
+        return true;
+    }
 
-	public void addCell(Cell c) {
-		if (!isFree(c.getLocation(), c.getSpan()))
-			throw new IllegalArgumentException(Prison2DMap.class.getName() + ": elements overlapping");
+    public void addWall(Wall w) {
+        for (int i = 0; i < w.getSpan().getXspan(); ++i)
+            for (int j = 0; j < w.getSpan().getYspan(); ++j)
+                if (this.getField(w.getLocation().getX() + i, w.getLocation().getY() + j) == MapFieldType.empty)
+                    this.map[w.getBeginning().getX() + i][w.getBeginning().getY() + j] = MapFieldType.wall;
+    }
 
-		for (int i = c.getLocation().getX() + 1; i < c.getSpan().getXspan() - 1; ++i)
-			for (int j = c.getLocation().getY() + 1; j < c.getSpan().getYspan() - 1; ++j)
-				this.map[i][j] = MapFieldType.cell;
+    public void addCell(Cell c) {
+        if (!isFree(c.getLocation(), c.getSpan()))
+            throw new IllegalArgumentException(Prison2DMap.class.getName() + ": elements overlapping");
 
-		Wall[] walls = new Wall[] { new Wall(c.getLocation(), c.getSpan().getXspan(), Direction.W),
-				new Wall(c.getLocation(), c.getSpan().getXspan(), Direction.E),
-				new Wall(c.getLocation(), c.getSpan().getYspan(), Direction.N),
-				new Wall(c.getLocation(), c.getSpan().getYspan(), Direction.S) };
-		for (Wall w : walls)
-			if (w.getDirection() != c.getDirection())
-				this.addWall(w);
-	}
+        for (int i = 1; i < c.getSpan().getXspan() - 1; ++i)
+            for (int j = 1; j < c.getSpan().getYspan() - 1; ++j)
+                this.map[c.getLocation().getX() + i][c.getLocation().getY() + j] = MapFieldType.cell;
 
-	public void addSpawner(Spawner s) {
-		if (!isFree(s.getLocation(), s.getSpan()))
-			throw new IllegalArgumentException(Prison2DMap.class.getName() + ": elements overlapping");
-		this.spawns.add(s);
-		this.map[s.getLocation().getX()][s.getLocation().getY()] = MapFieldType.spawn;
-	}
+        this.cells.add(c);
 
-	private void initMap() {
-		if (this.span == null)
-			throw new NullPointerException();
-		this.map = new MapFieldType[this.span.getXspan()][this.span.getYspan()];
-		Arrays.fill(this.map, MapFieldType.empty);
-	}
+        Wall[] walls = new Wall[] { new Wall(c.getLocation(), c.getSpan().getXspan(), Direction.W),
+                new Wall(c.getLocation(), c.getSpan().getXspan(), Direction.E),
+                new Wall(c.getLocation(), c.getSpan().getYspan(), Direction.N),
+                new Wall(c.getLocation(), c.getSpan().getYspan(), Direction.S) };
+        for (Wall w : walls)
+            if (w.getDirection() != c.getDirection()) this.addWall(w);
+    }
 
-	public static Prison2DMap parseMap(JSONObject json) {
-		if (json == null)
-			throw new IllegalArgumentException(Prison2DMap.class.getName() + ": attempting to parse null JSON");
-		Prison2DMap out = new Prison2DMap();
+    public void addSpawner(Spawner s) {
+        if (!isFree(s.getLocation(), s.getSpan()))
+            throw new IllegalArgumentException(Prison2DMap.class.getName() + ": elements overlapping");
+        this.spawns.add(s);
+        this.map[s.getLocation().getX()][s.getLocation().getY()] = MapFieldType.spawn;
+    }
 
-		JSONObject span = json.getJSONObject("span");
-		JSONArray cells = json.getJSONArray("cells");
-		JSONArray spawners = json.getJSONArray("spawners");
+    private void initMap() {
+        if (this.span == null) throw new NullPointerException();
+        this.map = new MapFieldType[this.span.getXspan()][this.span.getYspan()];
+        Arrays.fill(this.map, MapFieldType.empty);
+    }
 
-		out.span = new Int2DSpan(span.getInt("x"), span.getInt("y"));
-		out.initMap();
-		cells.forEach(new Consumer<Object>() {
-			@Override
-			public void accept(Object t) {
-				JSONObject cell = (JSONObject) t;
-				try {
-					out.addCell(new Cell(cell.getInt("x"), cell.getInt("y"), cell.getInt("length"),
-							cell.getInt("height"), Direction.valueOf(cell.getString("direction"))));
-				} catch (Exception e) {
-					System.err.println(Prison2DMap.class.getName() + ": error while parsing cell:");
-					System.err.println(e);
-				}
-			}
-		});
-		spawners.forEach(new Consumer<Object>() {
-			@Override
-			public void accept(Object t) {
-				JSONObject spawner = (JSONObject) t;
-				try {
-					out.addSpawner(new Spawner(spawner.getInt("x"), spawner.getInt("y"),
-							Class.forName(spawner.getString("spawn"))));
-				} catch (Exception e) {
-					System.err.println(Prison2DMap.class.getName() + ": error while parsing spawner:");
-					System.err.println(e.toString());
-				}
-			}
-		});
+    public static Prison2DMap parseMap(JSONObject json) throws JSONException {
+        if (json == null)
+            throw new IllegalArgumentException(Prison2DMap.class.getName() + ": attempting to parse null JSON");
+        Prison2DMap out = new Prison2DMap();
 
-		return out;
-	}
+        JSONObject span = json.getJSONObject("span");
+        JSONArray cells = json.getJSONArray("cells");
+        JSONArray spawners = json.getJSONArray("spawners");
+
+        out.span = new Int2DSpan(span.getInt("x"), span.getInt("y"));
+        out.initMap();
+        ((Iterable<Spawner>) cells).forEach(
+                new Consumer<Object>() {
+
+                    @Override
+                    public void accept(Object t) {
+                        JSONObject cell = (JSONObject) t;
+                        try {
+                            out.addCell(
+                                    new Cell(
+                                            cell.getInt("x"), cell.getInt("y"), cell.getInt("length"),
+                                            cell.getInt("height"), Direction.valueOf(cell.getString("direction"))
+                                    )
+                            );
+                        } catch (Exception e) {
+                            System.err.println(Prison2DMap.class.getName() + ": error while parsing cell:");
+                            System.err.println(e);
+                        }
+                    }
+                }
+        );
+        ((Iterable<Spawner>) spawners).forEach(
+                new Consumer<Object>() {
+
+                    @Override
+                    public void accept(Object t) {
+                        JSONObject spawner = (JSONObject) t;
+                        try {
+                            out.addSpawner(
+                                    new Spawner(
+                                            spawner.getInt("x"), spawner.getInt("y"),
+                                            Class.forName(spawner.getString("spawn"))
+                                    )
+                            );
+                        } catch (Exception e) {
+                            System.err.println(Prison2DMap.class.getName() + ": error while parsing spawner:");
+                            System.err.println(e.toString());
+                        }
+                    }
+                }
+        );
+
+        return out;
+    }
 
 }

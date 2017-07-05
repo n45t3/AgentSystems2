@@ -1,4 +1,4 @@
-package prisoners;
+package agents.prisoners;
 
 import java.util.ArrayList;
 import java.util.List;

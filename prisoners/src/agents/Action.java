@@ -1,4 +1,4 @@
-package prisoners;
+package agents;
 
 
 public enum Action {
