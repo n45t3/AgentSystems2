@@ -32,10 +32,10 @@ public abstract class Agent {
     }
 
     public boolean goTo(int x, int y) {
-        synchronized (this.map) {
-            if (!this.map.acquireField(x, y)) return false;
-            this.map.releaseField(this.x, this.y);
-        }
+        // synchronized (this.map) {
+        if (!this.map.acquireField(x, y)) return false;
+        this.map.releaseField(this.x, this.y);
+        // }
         this.x = x;
         this.y = y;
         return true;

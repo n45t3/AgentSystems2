@@ -85,7 +85,7 @@ public class Prisoner extends Agent {
                 }
 
                 if (c.mainGroup != null && PrisonerGroupMap.mapping.get(this.group).hasScythe(c.mainGroup)) continue;
-                
+
                 boolean retry = false;
                 for (String g : c.getGroups()) {
                     if (PrisonerGroupMap.mapping.get(this.group).hasScythe(g)) {
@@ -121,22 +121,10 @@ public class Prisoner extends Agent {
         } else this.target = tmp;
     }
 
-    public void scythe(Prisoner p) {
-
-    }
-
-    public void friend(Prisoner p) {
-
-    }
-
-    public void meet(Prisoner p) {
-        if (this.group.equals(p.group)) friend(p);
-        else if (PrisonerGroupMap.mapping.get(this.group).hasScythe(p.group)) scythe(p);
-    }
-
     private boolean check() {
         if (this.act == Action.FinallyLayYourWorthlessBodyToRest) return true;
         if (this.target != null && this.target[0] == this.x && this.target[1] == this.y) {
+            if (this.targetCell != null) this.targetCell.register(this);
             this.act = Action.FinallyLayYourWorthlessBodyToRest;
             System.out.println("destination reached");
             return true;
@@ -163,8 +151,8 @@ public class Prisoner extends Agent {
         }
         this.act = Action.TakeAnotherStepTowardsDeath;
         this.dir = Direction.get(next[0] - this.x, next[1] - this.y);
-        this.goTo(next[0], next[1]);
-        this.graph.removeVertex(this.graph.getVertex(this.x, this.y));
+        if (this.goTo(next[0], next[1])) this.graph.removeVertex(this.graph.getVertex(this.x, this.y));
+        else this.act = Action.ExistInConstantPainAndMisery;
     }
 
     @Override

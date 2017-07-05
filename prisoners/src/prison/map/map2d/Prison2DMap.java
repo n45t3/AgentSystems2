@@ -25,10 +25,22 @@ public class Prison2DMap {
     private MapFieldType[][] map;
 
     public int[] getFreeCellSpace(Cell c) {
-        for (int i = 1; i < c.getSpan().getXspan() - 1; ++i)
-            for (int j = 1; j < c.getSpan().getYspan() - 1; ++j)
-                if (map[c.getLocation().getX() + i][c.getLocation().getY() + j] != MapFieldType.occupied)
-                    return new int[] { c.getLocation().getX() + i, c.getLocation().getY() + j };
+        Direction d = c.getDirection();
+        if (d == Direction.N || d == Direction.W) {
+            int x0 = c.getLocation().getX() + c.getSpan().getXspan() - 2,
+                    y0 = c.getLocation().getY() + c.getSpan().getYspan() - 2;
+            for (int i = 0; i < c.getSpan().getXspan() - 2; ++i)
+                for (int j = 0; j < c.getSpan().getYspan() - 2; ++j)
+                    if (this.map[x0 - i][y0 - j] == MapFieldType.cell || this.map[x0 - i][y0 - j] == MapFieldType.empty)
+                        return new int[] { x0 - i, y0 - j };
+
+        } else if (d == Direction.S || d == Direction.E) {
+            int x0 = c.getLocation().getX() + 1, y0 = c.getLocation().getY() + 1;
+            for (int i = 0; i < c.getSpan().getXspan() - 2; ++i)
+                for (int j = 0; j < c.getSpan().getYspan() - 2; ++j)
+                    if (this.map[x0 + i][y0 + j] == MapFieldType.cell || this.map[x0 + i][y0 + j] == MapFieldType.empty)
+                        return new int[] { x0 + i, y0 + j };
+        }
         return null;
     }
 
@@ -50,7 +62,8 @@ public class Prison2DMap {
     public boolean acquireField(int x, int y) {
         if (this.map == null) return false;
         if (x < 0 || y < 0 || x >= this.getXspan() || y >= this.getYspan()) return false;
-        //if (getField(x, y) != MapFieldType.empty) return false;
+        // if (getField(x, y) != MapFieldType.empty) return false;
+        if (this.map[x][y] == MapFieldType.occupied || this.map[x][y] == MapFieldType.wall) return false;
         this.map[x][y] = MapFieldType.occupied;
         return true;
     }
